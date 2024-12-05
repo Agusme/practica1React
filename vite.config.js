@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/practica1React/', // Cambia esto por el nombre de tu repositorio
+  base: '/practica1React/', // Ajusta al nombre del repositorio
 });

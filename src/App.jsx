@@ -16,7 +16,7 @@ import BlogDeRecetas from "./components/BlogDeRecetas";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter  basename="/practica1React">
       <Container>
         <Routes>
           <Route path="/" element={<Home/>} />
