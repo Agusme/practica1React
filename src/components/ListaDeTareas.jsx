@@ -41,7 +41,7 @@ const ListaDeTareas = () => {
   };
   return (
     <div className="my-5">
-      <h2>Lista de Tareas📓</h2>
+      <h2 className="text-white">Lista de Tareas📓</h2>
       <div>
       <Form className="my-3" onSubmit={modoEdicion ? guardarEdicion : agregarTarea}>
       <Form.Group className="mb-3">
@@ -58,13 +58,13 @@ const ListaDeTareas = () => {
           </div>
         </Form>
         <ListGroup>
-          {tarea.map((tar, index) => (
+          { tarea.length <= 0 ? <p className="text-white text-center display-6"> No hay tareas por hacer</p> : 
+          tarea.map((tar, index) => (
             <ListGroupItem key={index}>
               {tar}
               <div className="text-end ">
               <Button onClick={() => eliminarTarea(tar)} className= "btn-danger mx-1" type="submit">Eliminar</Button>
               <Button onClick={() => editarTarea(tar)} className= "btn-warning" type="submit">Editar</Button>
-
               </div>
             </ListGroupItem>
           ))}

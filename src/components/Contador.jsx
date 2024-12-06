@@ -1,17 +1,27 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const Contador = () => {
 const [contador, setContador]= useState(0)
-
 const restar =()=>{
-    setContador(contador-1)
+    if(contador >0){
+        setContador(contador-1)
+    }else{
+        alert("El valor minimo es 0")
+    }
 }
 
 const sumar =()=>{
-    setContador(contador+1)
+    if(contador >10){
+setContador(contador+1)
+    } else{
+        alert('Alcanzaste el limite')
+    }
 }
-
+const reiniciar=()=>{
+setContador(0)
+}
     return (
         <>
         <h2  className="text-white  my-3">Contador de números</h2>
@@ -23,8 +33,9 @@ const sumar =()=>{
                 <button className="btn btn-warning fw-bold" onClick={sumar}>+</button>
             </div>
         </div>
-        <div className="text-end">
-    <button className="btn btn-warning mt-3"> <Link to={'/'} className="text-decoration-none text-dark">◀️Volver</Link></button>
+        <div className="d-flex my-4 justify-content-center  justify-content-between">
+            <Button className="btn btn-primary" onClick={reiniciar}>Reiniciar</Button>
+    <button className="btn btn-warning"> <Link to={'/'} className="text-decoration-none text-dark">◀️Volver</Link></button>
         </div>
         </>
     );
