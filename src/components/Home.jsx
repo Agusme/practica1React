@@ -49,6 +49,10 @@ const Home = () => {
             <Link to={"/blog-recetas"} className="text-decoration-none">
 Blog de Recetas            </Link>{" "}
           </ListGroup.Item>
+          <ListGroup.Item>
+            <Link to={"/carrito"} className="text-decoration-none">
+Carrito de compra          </Link>{" "}
+          </ListGroup.Item>
         </ListGroup>
       </div>
     </>

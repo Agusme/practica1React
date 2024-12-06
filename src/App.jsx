@@ -13,6 +13,7 @@ import EmpleadoList from "./components/EmpleadoList";
 import WebNoticias from "./components/WebNoticias";
 import WebClima from "./components/WebClima";
 import BlogDeRecetas from "./components/BlogDeRecetas";
+import CarritoDeCompra from "./components/CarritoDeCompra";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/web-noticias" element={<WebNoticias/>} />
           <Route path="/web-clima" element={<WebClima/>} />
           <Route path="/blog-recetas" element={<BlogDeRecetas/>} />
+          <Route path="/carrito" element={<CarritoDeCompra/>} />
 
         </Routes>
       </Container>
