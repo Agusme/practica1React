@@ -4,21 +4,21 @@ import { Button } from "react-bootstrap";
 
 const Contador = () => {
 const [contador, setContador]= useState(0)
-const restar =()=>{
-    if(contador >0){
-        setContador(contador-1)
-    }else{
-        alert("El valor minimo es 0")
+const restar = () => {
+    if (contador > 0) {
+      setContador(contador - 1);
+    } else {
+      alert("El valor mínimo es 0");
     }
-}
+  };
 
-const sumar =()=>{
-    if(contador >10){
-setContador(contador+1)
-    } else{
-        alert('Alcanzaste el limite')
+const sumar = () => {
+    if (contador < 10) {
+      setContador(contador + 1);
+    } else {
+      alert('Alcanzaste el límite');
     }
-}
+  };
 const reiniciar=()=>{
 setContador(0)
 }
